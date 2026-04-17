@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agenda — Sistema de Gestão de Tarefas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>Agenda</h1>
+    <p class="subtitle">Sistema de gestão de tarefas</p>
+
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="Digite uma nova tarefa..." />
+      <button onclick="addTask()">Adicionar</button>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num" id="totalCount">0</div><div class="lbl">Total</div></div>
+      <div class="stat"><div class="num" id="pendCount">0</div><div class="lbl">Pendentes</div></div>
+      <div class="stat"><div class="num" id="doneCount">0</div><div class="lbl">Concluídas</div></div>
+    </div>
+
+    <div id="pendSection" style="display:none;">
+      <div class="section-label">Pendentes</div>
+      <div class="task-list" id="pendList"></div>
+    </div>
+
+    <div id="doneSection" style="display:none;">
+      <div class="section-label">Concluídas</div>
+      <div class="task-list" id="doneList"></div>
+    </div>
+
+    <div class="empty" id="emptyMsg">Nenhuma tarefa ainda. Adicione uma acima!</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
